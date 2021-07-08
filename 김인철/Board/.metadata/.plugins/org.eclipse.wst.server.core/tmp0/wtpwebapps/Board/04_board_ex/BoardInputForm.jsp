@@ -23,7 +23,7 @@
 		$('input[value="작성"]').click(function() {
 			var frm = $('form[name="frm"]');
 			// 폼태그의 action 속성을 'BoardSave.jsp'
-			frm.attr('action', 'BoardSave.jsp');
+			frm.attr('action', '/Board/BoardControl?cmd=write-action');
 			// 폼태그의 submit() 호출
 			frm.submit();
 

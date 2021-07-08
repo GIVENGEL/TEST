@@ -3,10 +3,7 @@
 <%@ page import="board_ex.service.*, board_ex.model.*" %>
 <%
 // 1. 수정할 레코드의 게시글번호를 넘거받기
-	String seq = request.getParameter("seq");
-	// 2. Service에 getArticleById()함수를 호출하여 그 게시글번호의 레코드를 검색
-	ViewArticleService view = ViewArticleService.getInstance();
-	BoardVO rec = view.getArticleById(seq);
+	BoardVO rec = (BoardVO)request.getAttribute("view");
 	
 %>   
     
@@ -24,7 +21,7 @@
 
 <jsp:include page="navbar.jsp" />
 	<div class="container w-75 mt-5">
-		<form name='frm' method='post' action="BoardModify.jsp?seq=<%=seq%>">
+		<form name='frm' method='post' action="/Board/BoardControl?cmd=modify-action&seq=<%=rec.getSeq() %>">
 			<table class="table">
 				<thead>
 					<tr>

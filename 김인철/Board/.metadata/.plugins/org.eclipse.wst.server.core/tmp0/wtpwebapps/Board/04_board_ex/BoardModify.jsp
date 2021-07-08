@@ -6,24 +6,12 @@
 
 <%
 	// 0. 넘겨받는 데이타의 한글 처리
-	request.setCharacterEncoding("utf-8");
-	String seq = request.getParameter("seq");
-	String title = request.getParameter("title");
-	String pass = request.getParameter("pass");
-	String content = request.getParameter("content");
-
-	ViewArticleService view = ViewArticleService.getInstance();
-	BoardVO rec = view.getArticleById(seq);
-	rec.setTitle(title);
-	rec.setPass(pass);
-	rec.setContent(content);
 %>
 
 <!-- 1. 이전 화면의 입력값을 넘겨받아 BoardRec 객체의 각 멤버변수로 지정 -->
 
 <%
-	ModifyArticleService dao = ModifyArticleService.getInstance();
-	int result = dao.update(rec);
+	request.getAttribute("result");
 %>
 <!DOCTYPE html>
 <html>
@@ -39,7 +27,7 @@
 		PrintWriter script = response.getWriter();
 		script.println("<script>");
 		script.println("alert('정상적으로 입력되었습니다!')");
-		script.println("location.href = 'BoardList.jsp'");
+		script.println("location.href = '/Board/BoardControl?cmd=list-page'");
 		script.println("</script>");
 
 %>

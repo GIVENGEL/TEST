@@ -1,0 +1,45 @@
+package board_ex.control;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+public class BoardControl extends HttpServlet {
+
+	private HashMap commandMap;
+	private String	jspDir = "/04_board_ex/";
+	private String  error = "error.jsp";
+ 
+    public BoardControl() {
+        super();
+ 
+    }
+    
+    public void initCommand() {
+    	commandMap = new HashMap();
+    	
+    	commandMap.put("list-page", new CommandNull("BoardList.jsp"))
+    }
+    
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+	
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

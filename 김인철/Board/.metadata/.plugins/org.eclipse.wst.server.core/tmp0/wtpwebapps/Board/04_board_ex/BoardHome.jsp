@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="BoardInputForm.jsp">BoardInputForm.jsp</a><br>
-<a href="BoardList.jsp">BoardList.jsp</a><br>
+<a href="/Board/BoardControl?cmd=list-page">BoardInputForm.jsp</a><br>
+<a href="/Board/BoardControl?cmd=list-page">BoardList.jsp</a><br>
 
 </body>
 </html>

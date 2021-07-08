@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="board_ex.model.BoardDao"/>
+<fullyQualifiedTypeName name="board_ex.service.ListArticleService"/>
+<fullyQualifiedTypeName name="board_ex.service.ViewArticleService"/>
+<fullyQualifiedTypeName name="board_ex.service.ModifyArticleService"/>
+<fullyQualifiedTypeName name="board_ex.service.WriteArticleService"/>
 </qualifiedTypeNameHistroy>

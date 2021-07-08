@@ -34,7 +34,7 @@ String seq = request.getParameter("seq");
 
       </nav>
  <!-- navbar------------------------------------------------------------------ -->
-<form method="post" action="BoardDelete.jsp">
+<form method="post" action="/Board/BoardControl?cmd=delete-action&seq=<%=seq%>">
 <div class="container w-75">
 	<span class="jb-x-large ">해당 게시글의 암호를 입력하세요.</span> <br/>
 	<input class="w-100 text-center mb-4" type="password" name="password">

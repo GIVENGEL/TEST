@@ -9,4 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>BoardControl</servlet-name>
+  	<servlet-class>board_ex.control.BoardControl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	  	<servlet-name>BoardControl</servlet-name>
+	<url-pattern>/BoardControl</url-pattern>
+	<url-pattern>*.kic</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

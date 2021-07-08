@@ -1,0 +1,26 @@
+package board_ex.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mvc.guest.model.Message;
+import mvc.guest.model.MessageDao;
+import mvc.guest.model.MessageException;
+
+public class CommandView implements Command{
+	private String next;
+
+	public CommandView( String _next ){
+		next = _next;
+	}
+
+	public String execute( HttpServletRequest request, HttpServletResponse response   ) throws CommandException{
+		
+		
+		List<BoardVO> mList =
+		
+		
+		return next;
+	}
+
+}

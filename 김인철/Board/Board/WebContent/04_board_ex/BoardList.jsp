@@ -16,8 +16,8 @@ ListArticleService service = ListArticleService.getInstance();
 int start=0;
 int length=5;
 int group=5;
-int seq = (request.getParameter("seq")==null) ? 0 : Integer.parseInt(request.getParameter("seq"));
-start = (request.getParameter("seq")==null) ? 0 : length*Integer.parseInt(request.getParameter("seq"));
+int seq = (request.getAttribute("seq2") ==null) ? 0 : Integer.parseInt((String)request.getAttribute("seq2"));
+start = (request.getAttribute("seq2")==null) ? 0 : length*Integer.parseInt((String)request.getAttribute("seq2"));
 
 int totalCount = service.getTotalCount();
 
@@ -32,7 +32,7 @@ int headnum = (pagenum%group==0) ? pagenum/group-1 : pagenum/group;
 
 ArrayList<BoardVO> mList =  service.getPageList(start, length);
 
- int pageHeader = (seq%group!=0 || (request.getParameter("seq")==null) || seq==0 ) ? seq/group : seq/group-1;
+ int pageHeader = (seq%group!=0 || (request.getAttribute("seq2")==null) || seq==0 ) ? seq/group : seq/group-1;
 
 %>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -40,11 +40,11 @@ ArrayList<BoardVO> mList =  service.getPageList(start, length);
 	crossorigin="anonymous"></script>
 <script>
 $(function(){
-	
+var group = 5;
 var pg = $(".pg");
 	pg.css("cursor","pointer").click(function(){
 		var seq = $(this).attr('id');
-		location.href='BoardList.jsp?seq='+seq;
+		location.href='/Board/BoardControl?cmd=page-action&&seq='+seq;
 	})
 
 var pre = $(".pre");
@@ -52,12 +52,12 @@ var next = $(".next");
 
 next.css("cursor","pointer").click(function(){
 	var header = $(this).attr('id');
-	location.href='BoardList.jsp?seq='+header*5;
+	location.href='/Board/BoardControl?cmd=page-action&&seq='+header*group;
 })
 
 pre.css("cursor","pointer").click(function(){
 	var header = $(this).attr('id');
-	location.href='BoardList.jsp?seq='+header*5;
+	location.href='/Board/BoardControl?cmd=page-action&&seq='+header*group;
 })
 	
 
@@ -104,7 +104,7 @@ pre.css("cursor","pointer").click(function(){
 			%>
 			<tr>
 			<td class="text-center"><%=mList.get(i).getSeq() %></td>
-			<td><a href="BoardView.jsp?seq=<%=mList.get(i).getSeq() %>"><%=mList.get(i).getTitle() %></a></td>
+			<td><a href="/Board/BoardControl?cmd=view-page&&seq=<%=mList.get(i).getSeq() %>"><%=mList.get(i).getTitle() %></a></td>
 			<td class="text-center"><%=mList.get(i).getWriter() %></td>
 			<td class="text-center"><%=mList.get(i).getRegdate() %></td>
 			<td class="text-center"><%=mList.get(i).getCnt() %></td>
@@ -173,7 +173,7 @@ pre.css("cursor","pointer").click(function(){
 	
 	
 	
-	<input type="button" value="글쓰기" onclick="location.href='BoardInputForm.jsp'" class="btn btn-warning float-right">
+	<input type="button" value="글쓰기" onclick="location.href='/Board/BoardControl?cmd=write-page'" class="btn btn-warning float-right">
 	</div>
 	
 	<!-- Optional JavaScript -->

@@ -1,0 +1,5 @@
+package board_ex.service;
+
+public interface Command {
+
+}

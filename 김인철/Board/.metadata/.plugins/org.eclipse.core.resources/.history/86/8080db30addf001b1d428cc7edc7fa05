@@ -1,0 +1,27 @@
+package board_ex.command;
+
+
+import java.util.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import board_ex.*;
+
+public class CommandView implements Command{
+	private String next;
+
+	public CommandView( String _next ){
+		next = _next;
+	}
+
+	public String execute( HttpServletRequest request, HttpServletResponse response   ) throws CommandException{
+		
+		
+		List<BoardVO> mList =
+		
+		
+		return next;
+	}
+
+}

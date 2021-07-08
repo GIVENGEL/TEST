@@ -1,0 +1,29 @@
+package board_ex.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import board_ex.model.BoardVO;
+import board_ex.service.ViewArticleService;
+
+public class CommandModifyForm {
+	private String next;
+
+	public CommandModifyForm( String _next ){
+		next = _next;
+	}
+
+	public String execute( HttpServletRequest request, HttpServletResponse response   ) throws CommandException{
+		
+		try {
+			BoardVO vo = ViewArticleService.getInstance().getArticleByIds(request.getParameter("seq"));
+			request.setAttribute("view",vo);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return next;
+	}
+}

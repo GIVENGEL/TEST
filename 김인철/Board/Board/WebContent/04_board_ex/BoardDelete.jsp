@@ -8,9 +8,9 @@
 String password = request.getParameter("password");
 
 	// 2. Service에 delete() 호출
-	DeleteArticleService dao = DeleteArticleService.getInstance();
+
 	
-	int result =  dao.delete(seq, password); 
+	int result = (int)request.getAttribute("result");
 %>
 <!DOCTYPE html>
 <html>
@@ -42,13 +42,13 @@ String password = request.getParameter("password");
       </nav>
  <!-- navbar------------------------------------------------------------------ -->
 
-
-	<% if( result != 0) { %>
-	<div class="container w-75 text-center mb-4">
+<div class="container w-75 text-center mb-4">
 	<span class="jb-x-large ">게시글이 삭제되었습니다.</span> <br/>
 	<input class="w-100 btn btn-warning mt-4" type="button" value="창닫기" onClick="window.close()">
 	
 	</div>
+	<% if( result != 0) { %>
+	
 	<% } else { %>
 			<div class="container w-75 text-center mb-4">
 	<span class="jb-x-large ">삭제에 실패하였습니다.</span> <br/>

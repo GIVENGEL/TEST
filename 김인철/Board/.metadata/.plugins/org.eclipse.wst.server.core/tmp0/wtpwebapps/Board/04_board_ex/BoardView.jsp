@@ -3,10 +3,8 @@
 <%@ page import="board_ex.service.*, board_ex.model.*" %>
 <%
 	// 게시글번호 넘겨받아
-	String seq = request.getParameter("seq");
 	// 서비스의 함수를 호출하여 해당 BoardVO를 넘겨받는다.
-	ViewArticleService dao = ViewArticleService.getInstance();
-	BoardVO vo = dao.getArticleByIds(seq);
+	BoardVO vo = (BoardVO)request.getAttribute("view");
 	
 	
 %>    
@@ -40,7 +38,7 @@ var del = $("#del");
 	del.css("cursor", "pointer").click(function(){
 		var seq = $(this).attr('name');
 		
-		window.open("BoardDeleteForm.jsp?seq="+seq,"","width=550, height=350");
+		window.open("/Board/BoardControl?cmd=delete-page&seq="+seq,"","width=550, height=350");
 	});
 })
 </script>
@@ -69,9 +67,9 @@ var del = $("#del");
 	</tr>
 	<tr>
 		<td colspan="2">
-			<input type="button" value="목록보기" onclick="location.href='BoardList.jsp'" class="btn btn-warning float-right ml-4">
-			<input type="button" value="수정하기" onclick="location.href='BoardModifyForm.jsp?seq=<%=seq%>'" class="btn btn-warning float-right ml-4">
-			<input id="del" name=<%=seq%> type="button" value="삭제하기" class="btn btn-warning float-right ml-4">		
+			<input type="button" value="목록보기" onclick="location.href='/Board/BoardControl?cmd=list-page'" class="btn btn-warning float-right ml-4">
+			<input type="button" value="수정하기" onclick="location.href='/Board/BoardControl?cmd=modify-page&seq=<%=vo.getSeq() %>'" class="btn btn-warning float-right ml-4">
+			<input id="del" name=<%=vo.getSeq() %> type="button" value="삭제하기" class="btn btn-warning float-right ml-4">		
 		</td>
 	</tr>
 	</table>

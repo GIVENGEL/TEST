@@ -4,19 +4,17 @@
 <%@ page import="java.io.PrintWriter"%>
 <%
 	request.setCharacterEncoding("utf-8");
+BoardVO rec = (BoardVO)request.getAttribute("rec");
+
 %>
 
-<jsp:useBean id="rec" class="board_ex.model.BoardVO">
-	<jsp:setProperty name="rec" property="*"/>
-</jsp:useBean>
 
 <%
-System.out.println("BoardSave : " + rec.getTitle());
-	WriteArticleService.getInstance().write(rec); 
+System.out.println("BoardSave : ");
 	PrintWriter script = response.getWriter();
 	script.println("<script>");
 	script.println("alert('정상적으로 입력되었습니다!')");
-	script.println("location.href = 'BoardList.jsp'");
+	script.println("location.href = '/Board/BoardControl?cmd=list-page'");
 	script.println("</script>");
 	//BoardSave.jsp에서 새로고침을 하게 되면 중복 입력되기에
 	// 추후에 입력 후 BoardView.jsp?id=글번호 로 넘겨서 처리하고자
