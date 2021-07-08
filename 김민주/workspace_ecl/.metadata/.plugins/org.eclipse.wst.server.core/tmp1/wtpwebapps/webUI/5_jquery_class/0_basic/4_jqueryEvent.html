@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery event</title>
+
+<style type="text/css">
+.bg {
+	background: yellow;
+}
+.border {
+	border: 3px dotted red;
+}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/*
+			li 요소가 클릭됐을 때 
+			-> li요소의 글자를 div(#result)에 출력
+		*/
+		
+// 		원본형
+//	1)	li란 태그에 연결한다, 클릭 이벤트를 함수로
+// 		$('li').bind('click', function(){
+// 		$('#result').text($(this).text());
+// 		});
+//  2)  한번만 이벤트 발생이 가능한 함수 one
+// 		$('li').one('click', function(){
+// 		$('#result').text($(this).text());
+// 		});
+	
+// 		축약형
+		$('li').click(function(){
+			$('#result').text($(this).text());
+		})
+			
+		// h1 요소를 클릭하면 li요소를 추가
+		// 동적으로 생성한 요소에는 
+		// 기존의 이벤트가 할당이 안된다.!!
+		
+		$('h1').click(function(){
+			let li = $('<li/>').text(new Date());
+			$('ul').append(li);
+			
+		});
+		
+		// 동적으로 생성한 요소의 이벤트 처리
+		// 부모요소부터 선택한 후 on 함수로 이벤트를 할당해줘야지만 가능하다.
+		$('ul').on('click', 'li', function(){
+			$('#result').text($(this).text());
+		})
+		
+	})
+</script>
+</head>
+<body>
+	<h1>제이쿼리 이벤트</h1>
+	<ul>
+		<li>부에노스 아이레스</li>
+		<li>바르셀로나</li>
+		<li>리마</li>
+		<li>라파스</li>
+	</ul>
+	<div id="result"></div>
+</body>
+</html>

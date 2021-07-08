@@ -1,0 +1,9 @@
+$(function(){
+	
+	var img2= $('#dom2');
+	
+	img.click(function(){
+		location.href = 'detail.html';
+	});
+	
+});

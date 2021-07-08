@@ -1,0 +1,46 @@
+package mvc.simple;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+public class SimpleControl extends HttpServlet {
+	// 디폴트생성자.
+    public SimpleControl() {
+//        super(); 생략가능한 이유는 자동으로 만들어준다.
+      
+    }
+
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request,response);
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request,response);
+	}
+
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 1. 사용자의 요청(파라매터)를 받음
+		String type = request.getParameter("type");
+		// 2. 사용자 요청에 따라 알맞는 기능을 수행
+		String value="";
+		if(type==null) value = "안녕하세요"; // 넘어온 파라매터 값이 없으면 "안녕하세요"
+		else value = "아무개님 화이팅";
+		
+		
+		request.setAttribute("param", value);
+		
+		RequestDispatcher disp = request.getRequestDispatcher("/05_mvc_class/1_mvcSimple/simpleView.jsp");
+		disp.forward(request, response);
+	}
+
+}

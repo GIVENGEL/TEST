@@ -1,0 +1,9 @@
+package guest.model;
+
+public class Message {
+	private int messageID;
+	private String guestName;
+	private String password;
+	private String message;
+	
+}

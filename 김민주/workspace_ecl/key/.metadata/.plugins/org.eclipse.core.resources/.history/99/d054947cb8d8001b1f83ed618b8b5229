@@ -1,0 +1,9 @@
+$(function(){
+	
+	var img= $('img');
+	
+	img.click(function(){
+		location.href = 'detail.html';
+	});
+	
+});

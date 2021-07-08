@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<script src='/webUI/5_jquery_class/lib/jquery-3.1.1.min.js'
+	type='text/javascript'></script>
+<script type='text/javascript'>
+	$(function() {
+		
+		$('#up').click(function(){
+		//본문 영역 변수에 담기
+		var txt = $('.txt');
+		//본문 영역의 폰트 사이즈 가져오기
+		var fsize = txt.css('font-size');
+// 		alert(fsize); 16px
+		var num = parseInt(fsize,10); // 16
+		$('.txt').css('font-size', num + 2 + 'px')
+			
+		})
+
+		$('#down').click(function(){
+		//본문 영역 변수에 담기
+		var txt = $('.txt');
+		//본문 영역의 폰트 사이즈 가져오기
+		var fsize = txt.css('font-size');
+// 		alert(fsize); 16px
+		var num = parseInt(fsize,10); // 16
+// 		alert(num)
+		$('.txt').css('font-size', num - 2 + 'px')
+			
+		})
+		
+		$('#fontStyle').change(function(){
+			$('.txt').css('font-family',$('#fontStyle option:selected').val())
+		})
+		
+	});
+</script>
+
+</head>
+<body>
+	
+	<div class="wrap">
+		<div class="size">
+			<button id="up" value="+">+</button>
+			<button id="down" value="-">-</button>
+		</div>
+		<div class="fontSelect">
+			<select id="fontStyle">
+				<option value="'Noto Sans KR', 'sans-serif'">Noto Sans</option>
+				<option value="'Nanum Gothic', 'sans-serif'">나눔고딕</option>
+			</select>
+		</div>
+		<div class="txt">
+			가나다라마바사아자차카타파하
+		</div>
+		
+		
+	</div>
+	
+	
+</body>
+</html>
