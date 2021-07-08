@@ -1,0 +1,57 @@
+package mvcBbs.Command;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mvcBbs.model.BoardDao;
+import mvcBbs.model.BoardException;
+import mvcBbs.model.BoardVO;
+import mvcBbs.service.ListArticleService;
+
+public class CommandList implements Command{
+	// 페이지 이동 주소를 담을 변수 생성?
+	private String next;
+	
+	// 매개변수로 받은 내용을 next에 갱신
+	public CommandList(String _next) {
+		next = _next;
+	}
+	
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
+		try {	
+		 	// 한 페이지당 보여줄 페이지 개수
+		 	int pageBlock = 5;	
+		 	// 페이지 링크를 클릭한 번호 // 현재페이지
+		 	String pNum = request.getParameter("page");
+		 	if(pNum==null){
+		 		pNum = "1";
+		 	}
+		 	// 현재페이지 인트형 // 파라매터로 보낼 변수
+		 	int currentPage = Integer.parseInt(pNum); // 6
+			
+		 	// 리스트서비스객체생성
+		 	ListArticleService service = ListArticleService.getInstance();
+			
+		 	//총 데이터 개수
+		 	int count = BoardDao.getInstance().getTotalCount();
+			
+		 	// 총 페이지 수
+		 	int pageCount = service.getTotalCount();
+			
+			
+		 	List <BoardVO> mList = null;
+		 	if(count>0){
+		 		mList = service.getArticleList(currentPage);
+		 	}
+		}catch(BoardException e) {
+			
+		}
+		
+		
+		return next;
+	}
+
+}

@@ -1,0 +1,18 @@
+package mvcBbs.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class BoardDAO {
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private Statement stmt;
+	
+	private static final String 	dbDriver	=	"com.mysql.cj.jdbc.Driver";
+	private static final String		dbUrl		=	"jdbc:mysql://kic.cj7mov3fe2u4.ap-northeast-2.rds.amazonaws.com/";
+	private static final String		dbUser		=	"admin";
+	private static final String		dbPass		=	"rladlscjf0!";
+	private static final String		dbName		=	"PRAC05";
+	
+}

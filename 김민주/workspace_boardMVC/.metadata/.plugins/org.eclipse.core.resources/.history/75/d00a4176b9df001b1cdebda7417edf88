@@ -1,0 +1,5 @@
+package mvcBbs.Command;
+
+public class CommandNull {
+
+}

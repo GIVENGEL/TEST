@@ -1,0 +1,7 @@
+package mvcBbs.model;
+
+import java.sql.Connection;
+
+public class BoardDAO {
+	private Connection conn;
+}

@@ -1,0 +1,16 @@
+package mvcBbs.Command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CommandNull implements Command{
+	// 페이지 이동 주소를 담을 변수 생성?
+	private String next;
+	public 
+	
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
+		return null;
+	}
+
+}
