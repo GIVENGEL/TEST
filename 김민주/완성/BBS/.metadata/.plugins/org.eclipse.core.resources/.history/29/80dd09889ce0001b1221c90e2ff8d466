@@ -1,0 +1,10 @@
+package board.cotrol;
+
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServlet;
+
+public class BoardControl extends HttpServlet{
+	private HashMap commandMap;
+	
+}

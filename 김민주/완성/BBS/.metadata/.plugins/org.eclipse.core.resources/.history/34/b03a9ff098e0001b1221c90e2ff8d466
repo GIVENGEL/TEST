@@ -1,0 +1,44 @@
+package board_ex.command;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import board_ex.model.BoardException;
+import board_ex.model.BoardVO;
+import board_ex.service.ListArticleService;
+
+public class CommandList implements Command {
+	private String next;
+
+	public CommandList( String _next ){
+		next = _next;
+	}
+
+
+	public String execute( HttpServletRequest request, HttpServletResponse response   ) throws CommandException{
+		try {
+		// 페이지 넘버링하려고 보내주는거	
+		String id = request.getParameter("page");
+		System.out.println("excute : " + id);
+		if(id==null) {
+			id = "1";
+		}
+		int pNum = Integer.parseInt(id);
+		request.setAttribute("page", pNum);
+		ListArticleService service = ListArticleService.getInstance();
+		List<BoardVO> mList = service.getArticleList(pNum);
+		request.setAttribute("list", mList);
+		
+		}catch(BoardException e) {
+			throw new CommandException("CommandList.java < 목록보기시 > " + e.toString());
+		}
+		
+		return next;
+	}
+
+}
+
+
+

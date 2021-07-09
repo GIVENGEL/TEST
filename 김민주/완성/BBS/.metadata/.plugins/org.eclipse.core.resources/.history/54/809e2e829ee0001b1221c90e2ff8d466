@@ -1,0 +1,5 @@
+package board.control;
+
+public class BoardControl {
+
+}

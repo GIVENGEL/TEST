@@ -1,0 +1,24 @@
+package board_ex.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import board_ex.model.BoardException;
+import board_ex.service.*;
+
+public class CommandNull implements Command {
+	private String next;
+
+	public CommandNull( String _next ){
+		next = _next;
+	}
+
+
+	public String execute( HttpServletRequest request, HttpServletResponse response   ) throws CommandException{
+		return next;
+	}
+
+}
+
+
+

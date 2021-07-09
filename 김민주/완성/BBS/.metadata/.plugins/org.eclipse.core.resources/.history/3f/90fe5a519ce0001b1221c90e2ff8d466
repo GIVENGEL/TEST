@@ -1,0 +1,8 @@
+package board.cotrol;
+
+import javax.servlet.http.HttpServlet;
+
+public class BoardControl extends HttpServlet{
+	
+	
+}
