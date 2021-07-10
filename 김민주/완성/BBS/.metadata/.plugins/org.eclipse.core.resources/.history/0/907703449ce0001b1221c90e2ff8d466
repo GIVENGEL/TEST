@@ -1,0 +1,6 @@
+package board.cotrol;
+
+public class BoardControl extends HttpServlet{
+	
+	
+}

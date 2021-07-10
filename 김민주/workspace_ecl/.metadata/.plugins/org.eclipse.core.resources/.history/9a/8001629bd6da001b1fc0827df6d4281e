@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<% 
+	// 1. 삭제할 사번 넘겨받기
+	String eno = request.getParameter("eno");
+	// 2. DAO deleteEmp() 호출시 사번 넘겨주기
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>사정 정보 삭제</title>
+</head>
+<body>
+
+</body>
+</html>

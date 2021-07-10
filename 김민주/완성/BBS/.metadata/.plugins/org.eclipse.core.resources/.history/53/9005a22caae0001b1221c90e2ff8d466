@@ -1,0 +1,27 @@
+package board.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CommandInputAction implements Command{
+
+	private String next;
+	
+	public CommandInputAction(String _next) {
+		next = _next;
+	}
+	
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
+		
+		try {
+		
+			
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return next;
+	}
+
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.130
+E:\workspace\workspace_boardMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2248031278.index
+\BBS\src
+E:\workspace\workspace_boardMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\723433157.index
+\BBS\src
+E:\workspace\workspace_boardMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3824290915.index
+\BBS\src

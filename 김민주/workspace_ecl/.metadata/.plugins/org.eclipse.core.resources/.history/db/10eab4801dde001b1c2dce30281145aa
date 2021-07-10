@@ -1,0 +1,26 @@
+<%@ page contentType="text/xml; charset=utf-8"%>
+<%@ page language="java" import="java.sql.*"%>
+
+<%
+	String dbDriver = "com.mysql.cj.jdbc.Driver";
+	String dbUrl = "jdbc:mysql://kic.cj7mov3fe2u4.ap-northeast-2.rds.amazonaws.com/";
+	String dbUser = "admin";
+	String dbPass = "rladlscjf0!";
+	String dbName = "COMPANY";
+
+	Class.forName(dbDriver);
+	Connection connection = DriverManager.getConnection(dbUrl+dbName, dbUser, dbPass);
+
+	String sql = "select * from EMP where ename=?";
+	System.out.println(sql);
+	PreparedStatement ps = connection.prepareStatement(sql);
+	ps.setString(1, request.getParameter("id"));
+	ResultSet rs = ps.executeQuery(sql);
+
+	String result = "NO";
+	if (rs.next()) {
+		result = "YES";
+	}
+	out.print(result);
+%>
+

@@ -1,0 +1,9 @@
+package info.beans;
+
+public class InfoBean {
+	
+	private String name;
+	private String id;
+	private String pass;
+	
+}

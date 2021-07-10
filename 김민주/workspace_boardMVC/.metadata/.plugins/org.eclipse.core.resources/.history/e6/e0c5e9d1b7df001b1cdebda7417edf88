@@ -1,0 +1,11 @@
+package mvcBbs.Command;
+
+public class CommandException {
+	
+	public CommandException() {
+		
+	}
+	public CommandException(String error) {
+		super(error);
+	}
+}

@@ -1,0 +1,12 @@
+package mvcBbs.model;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+
+public class BoardDAO {
+	private Connection conn;
+	private PreparedStatement pstmt;
+	private Statement stmt;
+	
+}

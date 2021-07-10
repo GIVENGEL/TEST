@@ -1,0 +1,121 @@
+<html lang="ko">
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+    <title>키오스크 프로젝트</title>
+    
+    <!-- jquery lib -->
+     <script src='./lib/jquery-3.1.1.min.js' type="text/javascript"></script>
+     <script src="./js/oversea.js"></script>
+</head>
+
+<body>
+<!-- nav--------------------------------------------------------------------- -->
+ <div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ml-auto" >
+        <a class="navbar-brand text-warning text-center" href="index.html">KOSMO 여행사  [해외 여행]</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        
+ </nav>
+</div> 
+<!-- nav end--------------------------------------------------------------------- -->
+
+<!--header --------------------------------------------------------------------- -->
+<header class="bg-dark py-1">
+        <div class="container px-1">
+            <div class="row gx-3 justify-content-center">
+                <div class="col-lg-6">
+                    <div class="text-center my-2">
+                        <h1 class="display-5 fw-bolder text-white mb-2 cafe-text text-warning">KOSMO 여행</h1>
+                        <h1 class="display-5 fw-bolder text-white mb-2 cafe-text">Welcome KOSMO</h1>
+                        <p class="lead text-white-50 mb-4">Kosmo 여행사는 완전무결한 패키지를 제공합니다</p>
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>
+
+<!--header end --------------------------------------------------------------------- -->
+<!--section    --------------------------------------------------------------------- -->
+
+ <section class="py-5 border-bottom" id="features">
+        <div class="container px-5 my-5">
+            <div class="row gx-5">
+<!-- 김민주 : id = "oves1" 부여 'ove1' 아니고 'oves1' 혼동 주의! // jquery $(이 부분에 경로 지정하기 편하도록 설정) 실행결과 다른문제는 안생겼지만 인철씨 확인 필요-->    
+                <div class="col-lg-4 mb-5 mb-lg-0" id="oves1">
+                <img id="ove1" src = "img/oversea_01.jpg" alt = "home_1" class = "rounded" width = "330" />
+<!--김민주 : img 클릭시 값(하와이패키지 가격)을 가져오려고 id값을 hawaii_package_price#1500000로 주고 oversea.js에 hawaii_package변수에 담음 -->                
+                   <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3" id = "hawaii_package_price#1500000"><i class="bi bi-collection"></i></div>
+                   <div>
+                   <h2 class="h4 fw-bolder">하와이 특급 패키지</h2>
+                    <p>한 번쯤은 꿈꾸는 그곳 하와이, 멀지 않은 곳에 있습니다.</p>
+                    <a class="text-decoration-none" href="#!">
+                        패키지 구입하러 가기
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    </div>
+                    
+                </div>
+<!-- 김민주 : id = "oves2" 부여 'ove2' 아니고 'oves2' 혼동 주의! // jquery $(이 부분에 경로 지정하기 편하도록 설정) 실행결과 다른문제는 안생겼지만 인철씨 확인 필요-->                
+                <div class="col-lg-4 mb-5 mb-lg-0" id="oves2">
+                    <img id="ove2" src = "img/oversea_02.jpg" alt = "home_1" class = "rounded" width = "330" />
+<!--김민주 : img 클릭시 값(유럽패키지 가격)을 가져오려고 id값을 europe_package_price#3000000로 주고 oversea.js에 europe_package변수에 담음 -->                    
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3" id = "europe_package_price#3000000"><i class="bi bi-building"></i></div>
+                    <div>
+                    <h2 class="h4 fw-bolder">유럽 여행</h2>
+                    <p>유럽을 가로지르는 꿈을 꾸고 계신가요?</p>
+                    <a class="text-decoration-none" href="#!">
+                        패키지 구입하러 가기
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    </div>
+                </div>
+<!-- 김민주 : id = "oves3" 부여 'ove3' 아니고 'oves3' 혼동 주의! // jquery $(이 부분에 경로 지정하기 편하도록 설정) 실행결과 다른문제는 안생겼지만 인철씨 확인 필요-->
+                <div class="col-lg-4" id="oves3">
+                <img id="ove3" src = "img/oversea_03.jpg" alt = "home_1" class = "rounded" width = "330" />
+<!--김민주 : img 클릭시 값(크루즈패키지 가격)을 가져오려고 id값을 cruise_package_price#3000000로 주고 oversea.js에 cruise_package변수에 담음 -->                
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3" id = "cruise_package_price#5000000"><i class="bi bi-toggles2"></i></div>
+                    <div>
+                    <h2 class="h4 fw-bolder">세계 일주 크루즈 여행</h2>
+                    <p>크루즈 여행으로 세계를 다녀보세요</p>
+                    <a class="text-decoration-none" href="#!">
+                        패키지 구입하러 가기
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--section end--------------------------------------------------------------------- -->
+
+<!--외부 스크립트 --------------------------------------------------------------------- -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+     
+
+    
+</body>
+
+</html>

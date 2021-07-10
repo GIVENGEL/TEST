@@ -1,0 +1,38 @@
+package board.command;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import board.model.BoardVO;
+import board.service.ListArticleService;
+
+public class CommandView implements Command{
+
+	private String next;
+	
+	public CommandView(String _next) {
+		next = _next;
+	}
+	
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws CommandException {
+		
+		try {
+			//페이지 넘버링하려고 변수 받아옴
+			String seq = request.getParameter("seq");
+			
+			int pNum = Integer.parseInt(id);
+			request.setAttribute("page", pNum);
+			ListArticleService service = ListArticleService.getInstance();
+			List<BoardVO> mlist = service.getArticleList(pNum);
+			request.setAttribute("mlist", mlist);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		return next;
+	}
+
+}

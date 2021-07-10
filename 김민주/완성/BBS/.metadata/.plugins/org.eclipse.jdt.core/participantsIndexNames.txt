@@ -1,0 +1,7 @@
+INDEX VERSION 1.130
+C:\Users\kosmo_\Desktop\새 폴더\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\454115688.index
+\BBS\src
+C:\Users\kosmo_\Desktop\새 폴더\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\723433157.index
+\BBS\src
+C:\Users\kosmo_\Desktop\새 폴더\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3268413076.index
+\BBS\src

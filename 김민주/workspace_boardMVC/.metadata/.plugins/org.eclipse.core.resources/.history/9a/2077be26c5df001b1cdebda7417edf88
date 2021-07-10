@@ -1,0 +1,5 @@
+package mvcBbs.service;
+
+public class ListArticleService {
+
+}

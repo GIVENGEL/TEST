@@ -1,0 +1,44 @@
+package mvcBbs.control;
+
+import java.io.IOException;
+import java.util.HashMap;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class BbsControl extends HttpServlet {
+	private HashMap commandMap;
+	private String jspDir = "/mvcBbs/";
+	private String error = "error.jsp";
+       
+    
+    public BbsControl() {
+      
+    }
+
+	//어떤 방식으로 받았건 processRequest 로 해결
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+
+	//어떤 방식으로 받았건 processRequest 로 해결
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		processRequest(request, response);
+	}
+
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 전달받은 값 한글처리 위함
+		request.setCharacterEncoding("utf-8");
+		// 페이지 이동할 경로? 해쉬맵으로 전달해줄 값 얻어오는 법
+		String nextPage = "";
+		String cmdKey = request.getParameter("cmd");
+		if(cmdKey==null) {
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "member.beans.*" %>
+<% request.setCharacterEncoding("utf-8"); 
+	MemberDao.getInstance().insertMember(member);
+%>
+
+<!-- 하나씩 천천히 도전합시다 -->
+<!-- 사용자 입력값을 받아서 빈즈의 멤버로 저장 -->
+<jsp:useBean id="member" class="member.beans.Member">
+<!-- 저장한 객체에 속성을  선언한 변수의 변수명에 맞춰서 저장 -->
+<jsp:setProperty name="member" property="*" />
+</jsp:useBean>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> 회원가입 확인  </title>
+</head>
+<body>
+	아이디 : <%=member.getId() %><br>
+	패스워드 : <%=member.getPassword() %><br>
+	이름 : <%=member.getName() %> <br>
+	전화 : <%= member.getTel() %><br>
+	주소 : <%=member.getAddr() %><br>
+	
+</body>
+</html>
