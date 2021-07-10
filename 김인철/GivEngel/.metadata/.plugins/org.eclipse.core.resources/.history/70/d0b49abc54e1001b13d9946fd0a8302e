@@ -1,0 +1,5 @@
+package givengel.command;
+
+public interface Command {
+
+}
