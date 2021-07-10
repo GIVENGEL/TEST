@@ -39,7 +39,9 @@
                     </ul>
                 </li>
                 <li><a href="./blog.html">Flea Market</a></li>
+                <li><a href="./contact.html">Sponsor</a></li>
                 <li><a href="./contact.html">My page</a></li>
+                
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -64,7 +66,7 @@
 				<div class="col-lg-6">
 					<div class="header__top__left">
 						<ul>
-							<li><i class="fa fa-envelope"></i> Givengel.com</li>
+							<li></a><i class="fa fa-envelope"></i><a href="/GivEngel/Givengel?cmd=contact-page"> GivEngel?</a></li>
 							<li>기부와 후원으로 세상을 밝게 만드세요.</li>
 						</ul>
 					</div>
@@ -93,7 +95,7 @@
 					<a href="/GivEngel/Givengel?cmd=main-page"><img src="img/logo.png" alt=""></a>
 				</div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-9">
 				<nav class="header__menu">
 				<ul>
 					<li class="active"><a href="/GivEngel/Givengel?cmd=login-page">Home</a></li>
@@ -106,11 +108,15 @@
 							<li><a href="./blog-details.html">굿네이버스 상품</a></li>
 						</ul></li>
 					<li><a href="./blog.html">Flea Market</a></li>
+					<li><a href="./contact.html">Sponsor</a></li>
 					<li><a href="./contact.html">My page</a></li>
+					
 				</ul>
 				</nav>
 			</div>
-			<div class="col-lg-3">
+			
+		</div>
+		<div>
 				<div class="header__cart">
 					<ul>
 						<li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
@@ -121,11 +127,11 @@
 					</div>
 				</div>
 			</div>
-		</div>
 		<div class="humberger__open">
 			<i class="fa fa-bars"></i>
 		</div>
 	</div>
+	
 	</header>
 </body>
 </html>
