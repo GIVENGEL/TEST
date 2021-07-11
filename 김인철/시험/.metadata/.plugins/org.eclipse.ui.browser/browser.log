@@ -1,3 +1,7 @@
 
 7월 08, 2021 17:55:10.78 NEW SESSION
 7월 08, 2021 17:55:10.78 [15052:2076:0708/175510.775:ERROR:device_event_log_impl.cc(214)] [17:55:10.775] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
+
+7월 09, 2021 12:24:09.91 NEW SESSION
+7월 09, 2021 12:24:09.91 [10628:10620:0709/122409.912:ERROR:account_info_fetcher.cc(62)] OnGetTokenFailure: Invalid credentials (credentials rejected by server).
+7월 09, 2021 12:24:10.65 [10628:10620:0709/122410.656:ERROR:device_event_log_impl.cc(214)] [12:24:10.656] Bluetooth: bluetooth_adapter_winrt.cc:1072 Getting Default Adapter failed.
