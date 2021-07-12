@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+ 
+<mapper namespace="EmployeeMapper">
+
+<!-- 조인인 경우 resultType은 hashmap  -->
+<select id="empSelect" resultType="hashmap">
+	SELECT e.EMPNO empno, e.ENAME ename, e.JOB job, d.DNAME dname
+	FROM EMP e INNER JOIN DEPT d 
+	ON e.deptno=d.deptno
+</select>
+
+<select id="empView" parameterType="hashmap" resultType="hashmap">
+	SELECT * FROM 
+	EMP e INNER JOIN DEPT d 
+	ON e.DEPTNO = d.DEPTNO 
+	WHERE e.EMPNO = ${empno}
+</select>
+
+<insert id="empInsert" parameterType="hashmap">
+
+</insert>
+
+</mapper> 

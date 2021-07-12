@@ -1,0 +1,8 @@
+package mybatis.guest.model;
+
+public class CommentVO {
+	private int commentNo;
+	private String userId;
+	private String CommentContent;
+	private String regDate
+}

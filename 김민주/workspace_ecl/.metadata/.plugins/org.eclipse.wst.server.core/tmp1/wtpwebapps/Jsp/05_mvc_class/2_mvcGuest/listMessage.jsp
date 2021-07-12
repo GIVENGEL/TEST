@@ -6,7 +6,6 @@
 <%
 	// Control에서 param에 저장한 mList 변수에 지정
 	List <Message> mList = (List <Message>)request.getAttribute("param");
-	
 %>    
 <!DOCTYPE html>
 <html>

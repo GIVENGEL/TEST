@@ -1,0 +1,10 @@
+package mybatis.guest.model;
+
+public class empVO {
+	private int empNo;
+	private String ename; 
+	private String job; 
+	private int mgr;
+	private String hiredate;
+	private int sal;
+}

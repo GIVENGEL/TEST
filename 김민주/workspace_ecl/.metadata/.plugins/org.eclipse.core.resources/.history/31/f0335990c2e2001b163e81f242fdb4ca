@@ -1,0 +1,68 @@
+package mybatis.guest.session;
+
+import java.io.*;
+import java.util.*;
+
+import mybatis.guest.model.Comment;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.*;
+
+public class CommentRepository 
+{
+	//	private final String namespace = "CommentMapper";
+
+	private SqlSessionFactory getSqlSessionFactory() {
+		
+		InputStream inputStream;
+		try {
+			inputStream = Resources.getResourceAsStream("mybatis-config.xml");
+		} catch (IOException e) {
+			throw new IllegalArgumentException(e);
+		}
+		SqlSessionFactory sessFactory =  new SqlSessionFactoryBuilder().build(inputStream);
+		return sessFactory;
+	}
+	
+	public Integer insertComment(Comment c) {
+		// JDBC : Connection / mybatis : SqlSession 연결담당이다.
+		SqlSession sqlSess = getSqlSessionFactory().openSession();
+		try {
+//			CommentMapper의 insertComment 를 사용한다?
+			String statement = "CommentMapper.insertComment";
+			int result = sqlSess.insert(statement,c);
+			if(result> 0) {
+//				JDBC:AUTO-COMMIT / MYBATIS : COMMIT 지정 필수! 
+				sqlSess.commit();
+			}else{
+				sqlSess.rollback();
+			}
+			return result;
+		}finally {
+			sqlSess.close(); // 
+		}
+	}
+	
+	public List<Comment> selectComment(){
+		SqlSession sqlSess = getSqlSessionFactory().openSession();
+		try {
+			String statement = "CommentMapper.selectComment";
+			return sqlSess.selectList(statement);
+		}finally {
+			sqlSess.close();
+		}
+	}
+	
+	public Comment selectCommentByPK(long commntNo){
+		SqlSession sqlSess = getSqlSessionFactory().openSession();
+		try {
+			String statement = "CommentMapper.selectCommentByPK";
+			// 검색할 대상이 하나이니깐 selectOne
+			return sqlSess.selectOne(statement,commntNo);
+		}finally {
+			sqlSess.close();
+		}
+	}
+	
+	
+}

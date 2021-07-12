@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%@ page import="java.util.*" %>
+ <%@ page import="mybatis.guest.model.EmpVO" %>    
+ <%@ page import="mybatis.guest.service.EmpService" %>  
+  
+    
+<%
+
+	HashMap map = new HashMap();
+	List<HashMap> mList = EmpService.getInstance().empSelect();
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>	사원정보 </title>
+</head>
+<body>
+	<!-- table 구조로 사원번호/사원명/업무/부서명 출력하기  -->
+	<table>
+		<tr>
+			<td>사원번호</td>
+			<td>사원명</td>
+			<td>업무</td>
+			<td>부서명</td>
+		</tr>
+		<% for(int i=0; i<mList.size(); i++) { %>
+		<tr>
+			<td><%=mList.get(i).get(empno)  %></td>
+			<td><a href="viewComment.jsp?cId=<%=%>"><%= %> 님이 쓴 글</a></td>
+			<td><%= %></td>
+			<td><%= %></td>
+		</tr>
+	<% } %>
+	</table>
+	
+	
+</body>
+</html>
