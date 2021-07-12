@@ -8,4 +8,6 @@
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="guest.model.MessageDao"/>
 <fullyQualifiedTypeName name="guest.model.Message"/>
+<fullyQualifiedTypeName name="mybatis.guest.session.CommentRepository"/>
+<fullyQualifiedTypeName name="mybatis.guest.model.EmpVO"/>
 </qualifiedTypeNameHistroy>

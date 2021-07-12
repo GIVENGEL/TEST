@@ -80,7 +80,7 @@ public class GuestControl extends HttpServlet {
 			nextPage = error;
 			System.out.println("오류 : " + e.getMessage() );
 		}
-
+		System.out.println( jspDir + nextPage );
 		RequestDispatcher reqDp = getServletContext().getRequestDispatcher( jspDir + nextPage );
 		reqDp.forward( request, response );
 		

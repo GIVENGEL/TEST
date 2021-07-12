@@ -1,0 +1,6 @@
+# dbconnect setting
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://kic.cj7mov3fe2u4.ap-northeast-2.rds.amazonaws.com/
+db.username=admin
+db.password=rladlscjf0!
+db.dbname=PRAC03

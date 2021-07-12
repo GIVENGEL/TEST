@@ -1,0 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.*" %>
+<%@ page import="mybatis.guest.model.EmpVO" %>    
+<%@ page import="mybatis.guest.service.EmpService" %>  
+<%
+		HashMap map = new HashMap();
+		map.put("empno", empno);
+		EmpService.getInstance().empViewSelect(map);
+		
+		
+%>  
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		
+	<table>
+		<tr>
+			<td>사번</td>
+			<td>이름</td>
+			<td>업무</td>
+			<td>담당사수</td>
+			<td>고용일</td>
+			<td>연봉</td>
+			<td>Commission</td>
+			<td>부서번호</td>
+			<td>부서명</td>
+			<td>지역</td>
+		</tr>
+		<tr>
+			<td>사번</td>
+			<td>이름</td>
+			<td>업무</td>
+			<td>담당사수</td>
+			<td>고용일</td>
+			<td>연봉</td>
+			<td>Commission</td>
+			<td>부서번호</td>
+			<td>부서명</td>
+			<td>지역</td>
+		</tr>
+	</table>
+	
+	
+</body>
+</html>
