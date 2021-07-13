@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="#" key="selection"/>
+		<item value="img" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="img"/>
+			<item value="마이"/>
+			<item value="장"/>
+			<item value="add"/>
 			<item value="#"/>
 			<item value="상담"/>
 			<item value="블로그"/>
@@ -15,7 +19,6 @@
 			<item value="Flea Market"/>
 			<item value="카테고리"/>
 			<item value="상품"/>
-			<item value="img"/>
 			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;"/>
 		</list>
 		<list key="replacehistory">
@@ -26,7 +29,7 @@
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1041" key="DIALOG_X_ORIGIN"/>
-		<item value="579" key="DIALOG_Y_ORIGIN"/>
+		<item value="1628" key="DIALOG_X_ORIGIN"/>
+		<item value="620" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

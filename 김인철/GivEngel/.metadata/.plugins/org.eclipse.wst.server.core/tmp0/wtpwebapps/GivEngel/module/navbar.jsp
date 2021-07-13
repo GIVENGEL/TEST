@@ -40,7 +40,6 @@
                 </li>
                 <li><a href="./blog.html">Flea Market</a></li>
                 <li><a href="./contact.html">Sponsor</a></li>
-                <li><a href="./contact.html">My page</a></li>
                 
             </ul>
         </nav>
@@ -109,7 +108,6 @@
 						</ul></li>
 					<li><a href="./blog.html">Flea Market</a></li>
 					<li><a href="./contact.html">Sponsor</a></li>
-					<li><a href="./contact.html">My page</a></li>
 					
 				</ul>
 				</nav>
