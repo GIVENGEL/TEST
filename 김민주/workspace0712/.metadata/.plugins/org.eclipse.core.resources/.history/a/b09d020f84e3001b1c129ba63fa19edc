@@ -1,0 +1,7 @@
+package ex1_xml3_list;
+
+public class ListBean {
+	private List<Integer> intList;
+	private List<MemberBean> memberList;
+	
+}

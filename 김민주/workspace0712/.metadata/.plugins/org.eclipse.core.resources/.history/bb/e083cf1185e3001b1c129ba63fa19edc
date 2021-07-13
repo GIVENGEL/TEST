@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id='bean' class="ex1_xml3_list.ListBean">
+		<property name="intList" >
+			<list>
+				<value>23</value>
+				<value>33</value>
+				<value>53</value>
+				<value>13</value>
+				<value>63</value>
+			</list>
+		</property>
+		<property name="memberList"></property>
+</bean>
+
+
+</beans>

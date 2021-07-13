@@ -1,0 +1,13 @@
+package ex3_autowiring;
+
+import java.io.IOException;
+
+public class OutputerImpl implements Outputer {
+
+	@Override
+	public void writeMessage(String msg) throws IOException {
+		
+		
+	}
+
+}

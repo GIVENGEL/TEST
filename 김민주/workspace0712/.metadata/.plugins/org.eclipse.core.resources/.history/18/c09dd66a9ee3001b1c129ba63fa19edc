@@ -1,0 +1,11 @@
+package exercise.order.repository;
+
+import org.springframework.stereotype.Component;
+
+import exercise.order.domain.Customer;
+
+@Component
+public interface CustomerRepository {
+	void save(Customer customer);
+	void delete(long id);
+}

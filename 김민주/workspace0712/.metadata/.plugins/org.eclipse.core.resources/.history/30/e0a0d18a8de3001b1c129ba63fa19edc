@@ -1,0 +1,11 @@
+package ex3_autowiring;
+
+import java.io.IOException;
+
+public interface Outputer{
+	
+	public void writeMessage(Stirng msg) throws IOException{
+		
+	}
+
+}

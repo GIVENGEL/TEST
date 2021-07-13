@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 1. 삼성티비 객체 생성 위한 빈즈 생성 -->
+<bean id='tv' class='prac1.SamsungTV'>
+	<!-- 삼성티비에서 사용할 변수 중 소니스피커 타입의 변수가 있고 생성자의 매개변수로 받기로했으니 속성에 담아준다 /ref = 소니스피커빈즈(오브젝트형이므로 ref) -->
+
+</bean>
+
+<!-- 2.소니스피커 객체 생성 위한 빈즈 생성  -->
+<bean id='sony' class='prac1.SonySpeaker'></bean>
+</beans>

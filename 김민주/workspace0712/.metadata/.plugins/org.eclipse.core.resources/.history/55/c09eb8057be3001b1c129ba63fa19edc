@@ -1,0 +1,38 @@
+package ex1_xml1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		
+		//------------------------------------------------
+		// 0 . POJO 순수 자바  // 자바클래스를 뜻한다.
+//			MessageBean bean1 = new MessageBeanKoImpl();
+//			bean1.sayHello("홍길동");
+//			
+//			MessageBean bean2 = new MessageBeanEngImpl();
+//			bean2.sayHello("john");
+
+		
+		//------------------------------------------------
+		// 1. DI 
+		// 먼저 xml파일을 연동해준다고 선언?
+		// 선언하는 순간 각 클래스의 기본 생성자를 생성한다.
+		ApplicationContext context = new ClassPathXmlApplicationContext("ex1_xml1/applicationContext.xml");
+		// 오브젝트형을 클래스형으로 선언하는 2가지 방법
+		// 1. (클래스타입)
+		System.out.println("-------start-----------");
+		MessageBean b1 = (MessageBean)context.getBean("ko");
+		b1.sayHello("홍길자");
+		// 2. (가져올 객체,클래스명.class)
+		System.out.println("-------start-----------");
+		MessageBean b2 = context.getBean("eng",MessageBean.class);
+		b2.sayHello("Mark");
+		MessageBean b3 = context.getBean("eng",MessageBean.class);
+		b3.sayHello("John");
+		
+	}
+
+}

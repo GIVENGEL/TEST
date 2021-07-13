@@ -1,0 +1,19 @@
+package ex3_autowiring;
+
+import java.io.IOException;
+
+public class OutputerImpl implements Outputer {
+
+	String path;
+	
+	public void setPath(String path) {
+		this.path = path;
+	}
+	
+	@Override
+	public void writeMessage(String msg) throws IOException {
+		this.path
+		
+	}
+
+}

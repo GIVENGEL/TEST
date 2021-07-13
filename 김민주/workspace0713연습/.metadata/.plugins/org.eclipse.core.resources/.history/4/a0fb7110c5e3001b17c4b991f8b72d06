@@ -1,0 +1,8 @@
+package prac1;
+
+public class SonySpeaker {
+	public SonySpeaker() {
+		System.out.println("==> 소니스피커 객체생성" );
+	}
+
+}

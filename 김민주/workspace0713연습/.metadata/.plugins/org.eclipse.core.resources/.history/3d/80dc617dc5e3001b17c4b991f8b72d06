@@ -1,0 +1,23 @@
+package prac1;
+
+public class SamsungTV implements TV{
+
+	public void powerOn() {
+		
+	}
+
+	@Override
+	public void powerOff() {
+		
+	}
+
+	public void volumeUp() {
+		
+	}
+
+	@Override
+	public void volumeDown() {
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package exercise.order.repository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import exercise.order.domain.Customer;
+
+@Component
+public interface CustomerRepository {
+	@Autowired
+	void save(Customer customer);
+	@Autowired
+	void delete(long id);
+}

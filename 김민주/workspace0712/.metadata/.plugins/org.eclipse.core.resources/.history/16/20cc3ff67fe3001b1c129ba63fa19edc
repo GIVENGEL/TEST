@@ -1,0 +1,14 @@
+package ex1_xml2_ref;
+
+public class MemberDAO {
+	private MemberBean member;
+	
+	// 1) setter
+	
+	
+	// 2) constructor
+	
+	public void insert() {
+		member.output();
+	}
+}

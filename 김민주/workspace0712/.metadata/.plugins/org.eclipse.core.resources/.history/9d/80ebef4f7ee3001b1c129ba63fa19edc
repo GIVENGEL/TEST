@@ -1,0 +1,27 @@
+package ex1_xml2_ref;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context =
+				new ClassPathXmlApplicationContext("ex1_xml2_ref/applicationContext.xml");
+		
+		MemberBean m = context.getBean("member", MemberBean.class);
+		m.output();
+
+		MemberBean m2 = context.getBean("member2", MemberBean.class);
+		m2.output("김민주",29,"집에 가고싶다");
+		
+		MemberBean m3 = context.getBean("member", MemberBean.class);
+		m3.setName("김태현");
+		m3.setAge(29);
+		m3.setMessage("나는 롤 조빱이다ㅣ");
+		m3.output();
+		
+	}
+
+}

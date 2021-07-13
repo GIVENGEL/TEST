@@ -1,0 +1,13 @@
+package ex3_autowiring;
+
+import java.io.IOException;
+
+public class OutputerImpl implements Outputer {
+
+	@Override
+	public void writeMessage(Stirng msg) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

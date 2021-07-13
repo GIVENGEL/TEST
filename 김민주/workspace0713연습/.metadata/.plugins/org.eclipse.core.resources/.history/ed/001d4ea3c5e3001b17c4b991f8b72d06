@@ -1,0 +1,32 @@
+package prac1;
+
+public class SamsungTV implements TV{
+
+	public SamsungTV() {
+		System.out.println("===>삼성티비 객체생성");
+	}
+	
+	public SamsungTV(SonySpeaker sony) {
+		System.out.println("===>삼성티비 객체생성");
+	}
+	
+	
+	
+	public void powerOn() {
+		
+	}
+
+	public void powerOff() {
+		
+	}
+
+	public void volumeUp() {
+		
+	}
+
+	@Override
+	public void volumeDown() {
+		
+	}
+
+}

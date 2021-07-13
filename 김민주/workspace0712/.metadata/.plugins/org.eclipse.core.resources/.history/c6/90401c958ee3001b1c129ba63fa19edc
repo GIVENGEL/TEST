@@ -1,0 +1,28 @@
+package ex3_autowiring;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class MessageBeanKoImpl implements MessageBean {
+
+	private String name;
+	private String message;
+	
+	@Autowired
+	private Outputer out;
+	// setter,constructor 없음
+	
+	// setter
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
+
+	public void sayHello() {
+		System.out.println(name + "님께 "+message);
+	}
+
+}

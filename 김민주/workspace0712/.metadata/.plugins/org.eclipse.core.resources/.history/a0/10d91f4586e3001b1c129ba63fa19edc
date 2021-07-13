@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id='bean' class="ex1_xml3_list.ListBean">
+		<property name="intList" >
+			<list>
+				<value>23</value>
+				<value>33</value>
+				<value>53</value>
+				<value>13</value>
+				<value>63</value>
+			</list>
+		</property>
+		<property name="memberList">
+			<list>
+				<ref bean='mb1'></ref>
+				<ref bean='mb2'></ref>
+				<bean class="ex1_xml3_list.MemberBean">
+					<constructor-arg name='member' ref='mb2'></constructor-arg>
+				</bean>
+			</list>
+		</property>
+</bean>
+<bean id='mb1' class="ex1_xml3_list.MemberBean">
+	<!-- 1) setter -->
+	<property name="name" value='이순신'></property>
+	<property name="age" value='89'></property>
+	<property name="message" value='나의죽음을 알리지마라' ></property>
+</bean>
+
+<bean id='mb2' class="ex1_xml3_list.MemberBean">
+	<!-- 2) constructor -->
+	<constructor-arg name='name' value='강감찬'></constructor-arg>
+	<constructor-arg name='age' value='44'></constructor-arg>
+	<constructor-arg name='message' value='행주산성'></constructor-arg>
+</bean>
+
+</beans>

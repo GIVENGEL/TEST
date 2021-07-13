@@ -1,0 +1,23 @@
+package ex3_autowiring;
+
+public class MessageBeanKoImpl implements MessageBean {
+
+	private String name;
+	private String message;
+	
+	
+	// setter
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
+
+	public void sayHello(String name) {
+		System.out.println(name + "님 반갑습니다");
+	}
+
+}
