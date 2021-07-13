@@ -51,14 +51,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
-                        <div class="hero__text">
-                            <span style="color: red;">GivEngel .</span>
-                            <h2 style="color: white">당신의 후원, <br />그들의 미소입니다.</h2>
-                            <p style="color: red;">GivEngel는 당신들을 응원합니다.</p>
-                            <a href="#"  class="primary-btn">돈쭐내주기</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
