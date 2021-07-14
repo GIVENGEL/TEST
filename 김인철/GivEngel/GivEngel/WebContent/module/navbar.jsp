@@ -29,17 +29,20 @@
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
                 <li class="active"><a href="/GivEngel/Givengel?cmd=main-page">Home</a></li>
-                <li><a href="./shop-grid.html">Campaign</a></li>
-                <li><a href="#">Products</a>
-                    <ul class="header__menu__dropdown">
-                        <li><a href="./shop-details.html">시각장애 후원 상품</a></li>
-                        <li><a href="./shoping-cart.html">청각장애 후원 상품</a></li>
-                        <li><a href="./checkout.html">그린피스 후원 상품</a></li>
-                        <li><a href="./blog-details.html">굿네이버스 상품</a></li>
-                    </ul>
-                </li>
-                <li><a href="./blog.html">Flea Market</a></li>
-                <li><a href="./contact.html">Sponsor</a></li>
+                <li><hr></li>
+					<li><a href="#">Products</a>
+					<ul class="header__menu__dropdown">
+							<li><a href="./shop-details.html">ALL</a></li>
+							<li><a href="./shoping-cart.html">TOP</a></li>
+							<li><a href="./checkout.html">BOTTOM</a></li>
+							<li><a href="./blog-details.html">BAG</a></li>
+							<li><a href="./blog-details.html">ACC</a></li>
+							<li><a href="./blog-details.html">SHOES</a></li>
+							<li><hr></li>
+						</ul></li>
+					<li><a href="/GivEngel/Givengel?cmd=campaign-page">Campaign</a></li>
+					<li><a href="/GivEngel/Givengel?cmd=sponsor-page">Sponsor</a></li>
+					<li><a href="./blog.html">Flea Market</a></li>
                 
             </ul>
         </nav>
@@ -98,16 +101,19 @@
 				<nav class="header__menu">
 				<ul>
 					<li class="active"><a href="/GivEngel/Givengel?cmd=main-page">Home</a></li>
-					<li><a href="/GivEngel/Givengel?cmd=campaign-page">Campaign</a></li>
+					
 					<li><a href="#">Products</a>
-						<ul class="header__menu__dropdown">
-							<li><a href="./shop-details.html">시각장애 후원 상품</a></li>
-							<li><a href="./shoping-cart.html">청각장애 후원 상품</a></li>
-							<li><a href="./checkout.html">그린피스 후원 상품</a></li>
-							<li><a href="./blog-details.html">굿네이버스 상품</a></li>
+					<ul class="header__menu__dropdown">
+							<li><a href="./shoping-cart.html">TOP</a></li>
+							<li><a href="./checkout.html">BOTTOM</a></li>
+							<li><a href="./blog-details.html">BAG</a></li>
+							<li><a href="./blog-details.html">ACC</a></li>
+							<li><a href="./blog-details.html">SHOES</a></li>
 						</ul></li>
+					<li><a href="/GivEngel/Givengel?cmd=campaign-page">Campaign</a></li>
+					<li><a href="/GivEngel/Givengel?cmd=sponsor-page">Sponsor</a></li>
 					<li><a href="./blog.html">Flea Market</a></li>
-					<li><a href="./contact.html">Sponsor</a></li>
+					
 					
 				</ul>
 				</nav>

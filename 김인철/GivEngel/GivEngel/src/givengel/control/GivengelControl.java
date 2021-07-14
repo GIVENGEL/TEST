@@ -35,6 +35,7 @@ public class GivengelControl extends HttpServlet {
     	commandMap.put("contact-page", new CommandNull("contact.jsp"));
     	
     	commandMap.put("campaign-page", new CommandNull("campaign.jsp"));
+    	commandMap.put("sponsor-page", new CommandNull("sponsorList.jsp"));
 
     	
     }

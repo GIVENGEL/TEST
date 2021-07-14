@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- 빈 생성 -->
+<!--  1) bean 태그 직접 -->
+<bean  class="sample.HelloController"></bean>
+<!--  2) 자동 스캔 -->
+
+</beans>
