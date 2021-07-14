@@ -80,15 +80,15 @@
 										<img src="img/blog/details/details-author.jpg" alt="">
 									</div>
 									<div class="blog__details__author__text">
-										<h6>Michael Scofield</h6>
-										<span>Admin</span>
+										<h6>[중고상품 판매자]</h6>
+										<span>[명예등급]</span>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="blog__details__widget">
 									<ul>
-										<li><span>Categories:</span> Food</li>
+										<li><span>등록일</span> [상품 등록일]</li>
 										<li><span>Tags:</span> All, Trending, Cooking, Healthy
 											Food, Life Style</li>
 									</ul>

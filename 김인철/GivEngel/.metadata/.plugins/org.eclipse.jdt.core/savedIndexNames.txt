@@ -34,6 +34,7 @@ INDEX VERSION 1.130+C:\Users\ACER\Documents\GitHub\TEST\±Ë¿Œ√∂\GivEngel\.metadat
 3550930481.index
 3057552937.index
 1566364490.index
+220267679.index
 2175791624.index
 699245563.index
 1627581427.index
