@@ -17,14 +17,12 @@
                             <span>All Categories</span>
                         </div>
                         <ul>
-                            <li><a href="#">수공예 굿즈</a></li>
-                            <li><a href="#">패키지 굿즈</a></li>
-                            <li><a href="#">인기 굿즈</a></li>
-                            <li><a href="#">그린 피스 굿즈</a></li>
-                            <li><a href="#">적십자 굿즈</a></li>
-                            <li><a href="#">국경없는의사회 굿즈</a></li>
-                            <li><a href="#">결식 아동 굿즈</a></li>
-                            <li><a href="#">패럴림픽 굿즈</a></li>
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">BAG</a></li>
+                            <li><a href="#">SHOES</a></li>
+                            <li><a href="#">ACC</a></li>
                             
                         </ul>
                     </div>

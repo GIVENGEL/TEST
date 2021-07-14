@@ -12,7 +12,11 @@ public class HelloController {
 		System.out.println("start.do 요철됨");
 		
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/WEB-INF/view/hello.jsp");
+		/* mv.setViewName("/WEB-INF/view/hello.jsp"); */
+		mv.setViewName("hello");
+		mv.addObject("name","홍길동");
+		mv.addObject("message","오들은 뭐 먹징?");
+		
 		return mv;
 	}
 	
