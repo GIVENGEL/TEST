@@ -5,8 +5,15 @@ public class MemberVO {
 	private String id;
 	private int age;
 	private String name;
+	private boolean state;
 	
 	
+	public boolean isState() {
+		return state;
+	}
+	public void setState(boolean state) {
+		this.state = state;
+	}
 	public String getId() {
 		return id;
 	}

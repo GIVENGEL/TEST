@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+	
+	<insert id="insertBoard" parameterType="board">
+		<![CDATA[
+		INSERT INTO BOARD(title, writer, content, regdate, cnt)
+		VALUES(
+			#{title}, #{writer}, #{content}, 
+			sysdate(), 0)
+		]]>
+	</insert>
+	
+	<update id="updateBoard" parameterType="board">
+		<![CDATA[
+		UPDATE BOARD SET
+		title = #{title},
+		content = #{content}
+		WHERE seq = #{seq}
+		]]>
+	</update>
+	
+	<delete id="deleteBoard" parameterType="board">
+		<![CDATA[
+		DELETE FROM BOARD
+		WHERE seq = #{seq}
+		]]>
+	</delete>
+	
+	<select id="getBoard" parameterType="board" resultType="board">
+		<![CDATA[
+		SELECT *
+		FROM BOARD
+		WHERE seq = #{seq}
+		]]>
+	</select>
+	
+	<select id="getBoardList" resultType="board">
+		<![CDATA[
+		SELECT *
+		FROM BOARD
+		ORDER BY SEQ DESC
+		]]>
+	</select>
+</mapper>

@@ -28,7 +28,7 @@ public class RequestMappingController {
 		/*************************
 		 *  3) 리턴형이 void 인 경우
 		 *  	요청명과 동일한 뷰페이지를 지정
-		 *  	요청명 : re/c.do
+		 *  	요요청명 : re/c.do
 		 */
 		System.out.println("이전 페이지(클라이언트) id : " + id);
 		System.out.println("이전 페이지(클라이언트) pass : " + pass);
@@ -51,5 +51,7 @@ public class RequestMappingController {
 		m.addAttribute("data","스프링 만세");
 	
 	}
+	
+	
 
 }
